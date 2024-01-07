@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function About() {
+// Define a state variable 'count' and its corresponding setter function 'setCount'
+  const [count, setCount] = useState(0);
+
+  // Now, you can use 'count' and 'setCount' to manage and update the state
+  const increment = () => {
+    setCount(count + 1);
+  };
+
   return (
     <div>
       <h2>About Us</h2>
@@ -10,6 +18,8 @@ function About() {
         non feugiat dui quam ac nulla. Sed nec bibendum nunc. 
         Nulla varius mi ut odio varius, vel dictum velit dictum.
       </p>
+      <p>Count: {count}</p>
+        <button onClick={increment}>Increment</button>
     </div>
   );
 }
