@@ -16,9 +16,9 @@ const Profile = () => {
       email: Yup.string().email('Invalid email address').required('Email is required'),
       password: Yup.string()
         .matches(
-          /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+          /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/,
           'Password must meet criteria'
-        )
+          )
         .required('Password is required'),
     });
 

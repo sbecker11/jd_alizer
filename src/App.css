@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Styling for the Header */
+header {
+    background-color: darkgrey;
+    color: white;
+    height: 100px; /* Reduced header height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Spread header content horizontally */
+    align-items: center; /* Vertically center header content */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Styling for the Header Links */
+  header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display links horizontally */
+    align-items: center; /* Vertically center links */
   }
-  to {
-    transform: rotate(360deg);
+  
+  header a {
+    margin-right: 25px; /* Add margin to header links */
+    text-decoration: none; /* Remove underlines from links */
+    color: white;
   }
-}
+  
+  /* Styling for the Footer */
+  footer {
+    background-color: darkgrey;
+    color: white;
+    height: 100px; /* Reduced footer height */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center footer content */
+    align-items: center; /* Vertically center footer content */
+  }
+  
+  /* Styling for the left-column */
+  .left-column {
+    background-color: lightgrey;
+    width: 200px;
+    position: fixed;
+    top: 100px; /* Updated top margin based on reduced header height */
+    bottom: 100px; /* Updated bottom margin based on reduced footer height */
+    left: 0;
+    overflow-y: auto;
+  }
+  
+  /* Styling for the body-content */
+  .body-content {
+    position: fixed;
+    top: 100px; /* Updated top margin based on reduced header height */
+    left: 200px;
+    right: 0;
+    bottom: 100px; /* Updated bottom margin based on reduced footer height */
+    background-color: white;
+    overflow: hidden;
+    padding-left: 25px; /* Add padding to avoid overlapping with left-column */
+  }
