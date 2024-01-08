@@ -1,5 +1,5 @@
-import React, { useState } from 'react'; // Import useState from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'; // Import the router component
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import the router components and Routes
 
 import Header from './components/Header';
 import Left from './components/Left';
@@ -10,33 +10,22 @@ import Profile from './components/Profile';
 import './App.css'; // Import the CSS file
 
 function App() {
-  const [currentBodyContent, setCurrentBodyContent] = useState(<Home />);
-
-  const handleHomeClick = () => {
-    setCurrentBodyContent(<Home />);
-  };
-  const handleAboutClick = () => {
-    setCurrentBodyContent(<About />);
-  };
-
-  const handleLoginRegisterClick = () => {
-    setCurrentBodyContent(<Profile />);
-  };
-
   return (
     <Router>
       <div>
-        <Header 
-          onHomeClick={handleHomeClick}
-          onAboutClick={handleAboutClick} 
-          onLoginRegisterClick={handleLoginRegisterClick} 
-        />
+        <Header />
         <div className="container">
           <div className="left-column">
             <Left />
           </div>
           <div className="body-content">
-            {currentBodyContent}
+            <Routes>
+              {/* Define your routes here */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/login-register" element={<Profile />} />
+              {/* Add more routes as needed */}
+            </Routes>
           </div>
         </div>
         <Footer />

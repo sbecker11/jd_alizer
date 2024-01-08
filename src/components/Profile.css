@@ -1,0 +1,57 @@
+/* Profile.css */
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add a consistent margin between input fields */
+  }
+  
+  .label-error-container {
+    display: flex;
+    justify-content: space-between; /* Align label and error message */
+    margin-bottom: 5px; /* Add spacing between labels and inputs */
+  }
+  
+  .label-error-container label {
+    margin-left: 10px; /* Adjust the left margin as needed */
+  }
+  
+  .label-error-container .error {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px; /* Adjust the left margin as needed */
+  }
+  
+  .profile-form input {
+    padding: 5px;
+    border: 1px solid rgb(249, 4, 4); /* Dark grey border initially */
+    border-radius: 3px;
+  }
+  
+  /* Add a red border when there's a validation error */
+  .profile-form .input-container.error input {
+    border-color: red;
+  }
+    
+  .input-description {
+    height: 30px; /* Adjust the height as needed */
+    /* Add other styles as needed */
+  }
+  
+  .input-container:last-child {
+    margin-bottom: 0; /* Remove margin for the last input container */
+  }
+  
+  .button-container {
+    margin-top: 10px; /* Add margin to separate buttons from inputs */
+  }
+  
+  .button-container button {
+    margin-right: 10px; /* Add margin between buttons */
+  }
+  

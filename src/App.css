@@ -10,7 +10,6 @@ header {
     left: 0;
     right: 0;
     display: flex;
-    justify-content: space-between; /* Spread header content horizontally */
     align-items: center; /* Vertically center header content */
   }
   
@@ -22,7 +21,29 @@ header {
     display: flex; /* Display links horizontally */
     align-items: center; /* Vertically center links */
   }
+
+  .header-left {
+    width: 75px;
+    height: 75px;
+    margin-left: 12.5px;
+  }
   
+  .header-logo {
+    width: 75px;
+    height: 75px;
+    margin-left: 12.5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-right {
+    flex-grow: 1; /* Takes up remaining screen width */
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+  }
+  
+
   header a {
     margin-right: 25px; /* Add margin to header links */
     text-decoration: none; /* Remove underlines from links */
@@ -64,4 +85,12 @@ header {
     background-color: white;
     overflow: hidden;
     padding-left: 25px; /* Add padding to avoid overlapping with left-column */
+    padding-right: 25px; /* Add padding to avoid overlapping with left-column */
   }
+
+  /* Styling for the logo image in the Header */
+  .header-logo {
+    width: 75px;
+    height: 75px;
+  }
+  
