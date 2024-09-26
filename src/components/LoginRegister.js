@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import * as Yup from 'yup';
-import './Profile.css'; // Import your CSS file
+import './LoginRegister.css'; // Import your CSS file
 
-const Profile = () => {
+const LoginRegister = () => {
   const [profileData, setProfileData] = useState({
     name: '',
     email: '',
@@ -59,24 +59,12 @@ const Profile = () => {
 
   return (
     <div>
-      <h2>Profile</h2>
+      <h2>LoginRegister</h2>
       <form onSubmit={handleSubmit} className="profile-form">
+        
         <div className="input-container">
           <div className="label-error-container">
-            <label>Name</label>
-            {errors.name && <div className="error">{errors.name}</div>}
-          </div>
-          <input
-            type="text"
-            name="name"
-            value={profileData.name}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="input-container">
-          <div className="label-error-container">
-            <label>Email</label>
+            <label htmlFor="email">Email</label>
             {errors.email && <div className="error">{errors.email}</div>}
           </div>
           <input
@@ -84,12 +72,13 @@ const Profile = () => {
             name="email"
             value={profileData.email}
             onChange={handleChange}
+            autoComplete="email"
           />
         </div>
 
         <div className="input-container">
           <div className="label-error-container">
-            <label>Password</label>
+            <label htmlFor="password">Password</label>
             {errors.password && <div className="error">{errors.password}</div>}
           </div>
           <input
@@ -97,6 +86,7 @@ const Profile = () => {
             name="password"
             value={profileData.password}
             onChange={handleChange}
+            autoComplete="current-password"
           />
         </div>
 
@@ -109,4 +99,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default LoginRegister;

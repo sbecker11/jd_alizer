@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
 function Header({ onHomeClick, onAboutClick, onLoginRegisterClick }) {
   return (
     <header>
